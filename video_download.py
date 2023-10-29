@@ -28,8 +28,4 @@ def download_video(videos_file):
 
 
 if __name__ == "__main__":
-    # download_video("video_links.txt")
-    t = YouTubeTranscriptApi.get_transcript("bNKdlnoAqIs", languages=["en"])
-    formatter = JSONFormatter()
-    formatted_captions = formatter.format_transcript(t)
-    print(t)
+    download_video("video_links.txt")
