@@ -20,3 +20,6 @@ The program will download all YouTube videos specified in `video_links.txt` and 
 
 ### Milestone 3
 1. The function will translate each text file in the specified input folder path from English to French (default). 
+
+### Milestone 4
+1. The function takes a French text file as input and convert it to audio. 
