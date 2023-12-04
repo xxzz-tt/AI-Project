@@ -3,3 +3,6 @@
 Videos/
 Audio/
 Translated_Audio/
+*.pyc
+translationUI/
+UIFiles/

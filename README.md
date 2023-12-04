@@ -1,13 +1,3 @@
----
-title: WhispersUI
-emoji: 📊
-colorFrom: purple
-colorTo: pink
-sdk: streamlit
-sdk_version: 1.29.0
-app_file: app.py
-pinned: false
----
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
 # AI-Project
@@ -35,3 +25,9 @@ The program will download all YouTube videos specified in `video_links.txt` and 
 
 ### Milestone 4
 1. The function takes a French text file as input and convert it to audio. 
+
+### Milestone 5
+#### How to run
+1. Run `pip install -r requirements.txt` to install all required dependencies
+2. Run `streamlit run translationUI.py` to start the Streamlit server locally
+3. Enter a valid YouTube URL link on the text input field and wait for the video to be processed. The entire process might take more than 10 minutes as audio will be extracted from the video, convert to text, translated to French and convert back to speech again. 
