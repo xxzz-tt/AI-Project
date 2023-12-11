@@ -29,7 +29,7 @@ The program will download all YouTube videos specified in `video_links.txt` and 
 ### Milestone 5
 1. Run `pip install -r requirements.txt` to install all required dependencies
 2. Run `streamlit run translationUI.py` to start the Streamlit server locally
-3. Enter a valid YouTube URL link on the text input field and wait for the video to be processed. The entire process might take more than 10 minutes as audio will be extracted from the video, convert to text, translated to French and convert back to speech again. 
+3. Enter a valid YouTube URL link on the text input field and wait for the video to be processed. The entire process might take more than 10 minutes as audio will be extracted from the video, convert to text, translated to French and convert back to speech again.
 
 ### Milestone 6
 1. Make sure Docker is installed locally
@@ -37,3 +37,5 @@ The program will download all YouTube videos specified in `video_links.txt` and 
 3. `sudo docker compose build` to build the application
 4. `docker-compose up` to start the application running
 
+How the interface will look like:
+![alt text](https://github.com/xxzz-tt/AI-Project/blob/milestone-6/ui.png?raw=true)
