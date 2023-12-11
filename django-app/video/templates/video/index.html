@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Translate{% endblock %}</title>
+  {% load bootstrap5 %} {% load static %} 
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<body>
+<div class="container p-3">
+    <center>Translate YouTube subtitles from English to French</center>
+    <div class="row justify-content-center"> 
+        <div class="card w-50 shadow border">
+            <div class="card-body d-flex flex-column align-self-center">
+                <h5 class="card-title">Select a YouTube Video with English Captions</h5>
+                <form class="form-inline" action="" method="POST">
+                    {% csrf_token %}
+                    <label for="video_link">Video: </label>
+                    <input id="video_link" type="text" name="video_link" maxlength="100" required placeholder="Enter full URL">
+                    <input type = "submit" value ="Submit" class="btn btn-dark">
+                </form>
+            </div>
+        </div>
+    </div>
+    {% if video %}
+    <center>
+        <video width="430" height="340" controls>
+            <source src="{% static video %}" type="video/mp4"> </source>
+        </video>
+    </center>
+    {% endif %}
+
+    {% if seg_exists %}
+    <center>
+        {% comment %} <div id="my_table"> {{ segments.to_html() | safe }} 
+        </div>  {% endcomment %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Original</th>
+                    <th>Translated</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in segments %}
+                <tr>
+                    <td>{{i.Timestamp}}</td>
+                    <td>{{i.Original}}</td>
+                    <td>{{i.Translated}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </center>
+    {% endif %}
+</div>
+</body>
+</html>

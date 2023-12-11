@@ -6,3 +6,6 @@ Translated_Audio/
 *.pyc
 translationUI/
 UIFiles/
+*.mp4
+*.mp3
+*.wav

@@ -1,9 +1,9 @@
 from django import forms
-from django.forms import ModelForm
-from .models import Video
 
-class VideoForm(ModelForm):
+class VideoForm(forms.Form):
+    
+    video_link = forms.CharField(label="Video", max_length=150)
     class Meta:
-        model = Video
-        
-        fields = ("video_link",)
+        widgets = {
+            "video_link": forms.TextInput(attrs={"class": "form-control"}),
+        }
