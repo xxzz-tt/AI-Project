@@ -30,3 +30,10 @@ The program will download all YouTube videos specified in `video_links.txt` and 
 1. Run `pip install -r requirements.txt` to install all required dependencies
 2. Run `streamlit run translationUI.py` to start the Streamlit server locally
 3. Enter a valid YouTube URL link on the text input field and wait for the video to be processed. The entire process might take more than 10 minutes as audio will be extracted from the video, convert to text, translated to French and convert back to speech again. 
+
+### Milestone 6
+1. Make sure Docker is installed locally
+2. `cd django-app` to the root directory of the django folder
+3. `sudo docker compose build` to build the application
+4. `docker-compose up` to start the application running
+

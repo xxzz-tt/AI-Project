@@ -5,7 +5,7 @@ from .forms import VideoForm
 from .utils import *
 
 def index(request):
-    # delete_temp_files()
+    delete_temp_files()
     context = {}
     if request.method == "POST":
         form = VideoForm(request.POST)

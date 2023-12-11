@@ -100,15 +100,12 @@ def process_video(vid_link):
     
     aud_filename, text, segments_df = vid_audio_to_text(vid_filename)
     
-    print("translating segments")
     segments_df['Translated'] = segments_df['Original'].apply((lambda x: translate(x)))
         
     translated = translate(text)
     aud_fr_filename = aud_filename.replace('.mp3', '_subs.wav')
-    print("convert french text to audio")
     convert_french_to_audio(text, aud_fr_filename)
     
-    print("add subtitles")
     sub_vid_fname, new_audio_fr = add_subtitles_and_translation_to_movie(segments_df[['Timestamp', 'End_Timestamp', 'Translated']], vid_filename, aud_fr_filename)
     
     segments_df['Timestamp'] = segments_df['Timestamp'].map(lambda x: '{:02}:{:02}:{:02.2f}'.format(int(x//3600), int(x%3600//60), x%60))

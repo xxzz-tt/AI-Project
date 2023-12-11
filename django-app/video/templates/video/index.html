@@ -43,11 +43,11 @@
                 </tr>
             </thead>
             <tbody>
-                {% for i in segments %}
+                {% for i, r in segments.iterrows %}
                 <tr>
-                    <td>{{i.Timestamp}}</td>
-                    <td>{{i.Original}}</td>
-                    <td>{{i.Translated}}</td>
+                    <td>{{r.Timestamp}}</td>
+                    <td>{{r.Original}}</td>
+                    <td>{{r.Translated}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
