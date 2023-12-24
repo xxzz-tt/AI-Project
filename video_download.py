@@ -23,8 +23,8 @@ def download_video(videos_file):
             formatter = JSONFormatter()
             formatted_captions = formatter.format_transcript(captions)
 
-            with open("Captions/" + yt.title + ".json", "w", encoding="utf-8") as f:
-                f.write(formatted_captions)
+            with open("Captions/" + yt.title + ".json", "w", encoding="utf-8") as fp:
+                fp.write(formatted_captions)
 
 
 if __name__ == "__main__":
